@@ -11,12 +11,15 @@
     <div class="flex flex-col justify-center items-center h-screen bg-gray-200">
       <img src="./assets/money.png" />
       <h1 class="text-3xl text-indigo font-bold my-10">
-        Exchange Rate Calculator1
+        Exchange Rate Calculator
       </h1>
       <p>Choose the currency and the amounts to get the exchange rate</p>
       <div class="flex flex-col h-24 justify-around content-center mt-16">
         <div>
-          <select class="py-2 bg-transparent rounded border border-gray-400">
+          <select
+            id="currency-one"
+            class="py-2 bg-transparent rounded border border-gray-400"
+          >
             <option value="AED">AED</option>
             <option value="ARS">ARS</option>
             <option value="AUD">AUD</option>
@@ -53,42 +56,32 @@
             <option value="PAB">PAB</option>
             <option value="PEN">PEN</option>
             <option value="PHP">PHP</option>
-            <option value="PKR">PKR</option>
-            <option value="PLN">PLN</option>
-            <option value="PYG">PYG</option>
-            <option value="RON">RON</option>
-            <option value="RUB">RUB</option>
-            <option value="SAR">SAR</option>
-            <option value="SEK">SEK</option>
-            <option value="SGD">SGD</option>
-            <option value="THB">THB</option>
-            <option value="TRY">TRY</option>
-            <option value="TWD">TWD</option>
-            <option value="UAH">UAH</option>
             <option value="USD" selected>USD</option>
             <option value="UYU">UYU</option>
-            <option value="VND">VND</option>
             <option value="ZAR">ZAR</option>
           </select>
           <input
             type="number"
             class="input-currency bg-transparent py-2 text-right border-none focus:outline-none"
-            id="input-currency"
+            id="amount-one"
             placeholder="0"
             value="1"
           />
         </div>
-        <div>
+        <div class="flex justify-left items-center">
           <button
-            class="bg-primary-500 bg-green-400 text-xl my-10 py-1 px-1 text-white border border-green-500"
-            id="swapBtn"
+            class="bg-primary-500 bg-green-400 text-xl my-10 py-1 px-1 mr-4 text-white border border-green-500"
+            id="swap-button"
           >
             Swap!!
           </button>
-          <div id="rate"></div>
+          <div id="rate-info"></div>
         </div>
         <div>
-          <select class="py-2 bg-transparent rounded border border-gray-400">
+          <select
+            id="currency-two"
+            class="py-2 bg-transparent rounded border border-gray-400"
+          >
             <option value="AED">AED</option>
             <option value="ARS">ARS</option>
             <option value="AUD">AUD</option>
@@ -125,27 +118,14 @@
             <option value="PAB">PAB</option>
             <option value="PEN">PEN</option>
             <option value="PHP">PHP</option>
-            <option value="PKR">PKR</option>
-            <option value="PLN">PLN</option>
-            <option value="PYG">PYG</option>
-            <option value="RON">RON</option>
-            <option value="RUB">RUB</option>
-            <option value="SAR">SAR</option>
-            <option value="SEK">SEK</option>
-            <option value="SGD">SGD</option>
-            <option value="THB">THB</option>
-            <option value="TRY">TRY</option>
-            <option value="TWD">TWD</option>
-            <option value="UAH">UAH</option>
             <option value="USD">USD</option>
             <option value="UYU">UYU</option>
-            <option value="VND">VND</option>
             <option value="ZAR">ZAR</option>
           </select>
           <input
             type="number"
             class="input-currency bg-transparent py-2 text-right border-none focus:outline-none"
-            id="output"
+            id="amount-two"
             placeholder="0"
             value="0"
           />
